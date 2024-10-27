@@ -1,0 +1,12 @@
+{% extends "base.sh.j2" %}
+{% block build_commands %}
+{{ super() }}
+enable_execute_command() {
+    aws ecs update-service \
+        --region {{ environment.collection.region }} \
+        --cluster {{ environment.collection.instance_name }} \
+        --service {{ service.instance_name }} \
+        --enable-execute-command
+}
+enable_execute_command
+{% endblock %}

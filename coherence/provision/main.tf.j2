@@ -1,0 +1,7 @@
+{% extends "base.tf.j2" %}
+{% block custom scoped %}
+{{ super() }}
+resource "aws_s3_bucket" "test_bucket" {
+  bucket = "qa-my-basic-test-bucket"
+}
+{% endblock custom %}

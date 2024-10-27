@@ -1,0 +1,7 @@
+frontend:
+  type: frontend
+  assets_path: dist
+  local_packages: ["node_modules"]
+  install: ["yarn", "install"]
+  build: ["yarn", "build"]
+  dev: ["yarn", "dev"]

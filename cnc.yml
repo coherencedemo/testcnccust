@@ -1,0 +1,12 @@
+services:
+  reactaws:
+    build:
+      context: .
+      dockerfile: ''
+    x-cnc:
+      type: frontend
+      build: yarn build
+      url_path: ''
+      assets_path: dist
+    x-coherence:
+      track_branch_name: main
